@@ -1,0 +1,8 @@
+# Add vendor RSS/Atom feeds here.
+# Example:
+# - name: OpenAI
+#   rss: https://example.com/rss
+#   site: https://example.com/blog
+#   tags: [vendor, blog]
+
+sources: []
