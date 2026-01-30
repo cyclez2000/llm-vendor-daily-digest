@@ -90,9 +90,9 @@ def main(argv: list[str]) -> int:
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / f"{report_date}.md"
 
-    header = f"# Daily Digest ({report_date})\n\n"
+    header = f"# Daily Digest / 日报摘要 ({report_date})\n\n"
     if not items:
-        body = "No items found for this date.\n"
+        body = "No items found for this date. / 当日未找到相关条目。\n"
     else:
         body = summarize_items(items, report_date.isoformat())
 

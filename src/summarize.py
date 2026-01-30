@@ -30,13 +30,21 @@ def _format_date(dt: datetime) -> str:
 def _fallback_digest(items: list[Item]) -> str:
     grouped = _group_items(items)
     lines: list[str] = []
+    lines.append("## English")
     for source in sorted(grouped.keys()):
-        lines.append(f"## {source}")
+        lines.append(f"### {source}")
         for item in grouped[source]:
             summary = f" - {_truncate(item.summary)}" if item.summary else ""
-            lines.append(
-                f"- [{item.title}]({item.link}) ({_format_date(item.published)}){summary}"
-            )
+            entry = f"[{item.title}]({item.link}) ({_format_date(item.published)}){summary}"
+            lines.append(f"- {entry}")
+        lines.append("")
+    lines.append("## 中文")
+    for source in sorted(grouped.keys()):
+        lines.append(f"### {source}")
+        for item in grouped[source]:
+            summary = f" - {_truncate(item.summary)}" if item.summary else ""
+            entry = f"[{item.title}]({item.link}) ({_format_date(item.published)}){summary}"
+            lines.append(f"- {entry}")
         lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
@@ -84,11 +92,12 @@ def summarize_items(items: list[Item], report_date: str) -> str:
 
     system = (
         "You are an assistant that writes concise daily vendor digests. "
-        "Return markdown grouped by vendor with 1-2 sentence bullets. "
-        "Always include the source link." 
+        "Return markdown with two top-level sections: '## English' and '## 中文'. "
+        "Within each section, group by vendor using '### Vendor'. "
+        "Each item should be a single bullet with 1-2 sentences, always include the source link."
     )
     user = (
-        f"Write a daily digest for {report_date}.\n"
+        f"Write a bilingual daily digest for {report_date}.\n"
         "Items:\n" + "\n".join(bullets)
     )
 
