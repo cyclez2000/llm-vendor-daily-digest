@@ -11,7 +11,7 @@ sources:
     site: https://openai.com/news
     tags: [vendor, blog]
   - name: Anthropic (Newsroom)
-    rss: https://rsshub.app/transform/html?url=https%3A%2F%2Fwww.anthropic.com%2Fnews&item=a%5Bhref%5E%3D%22%2Fnews%2F%22%5D%5Bclass*%3D%22FeaturedGrid%22%5D&itemTitle=h2%2Ch4&itemLink=a&itemLinkAttr=href&itemLinkPrefix=https%3A%2F%2Fwww.anthropic.com&itemPubDate=time&itemDesc=p
+    rss: https://rsshub.app/transform/html?url=https%3A%2F%2Fwww.anthropic.com%2Fnews&item=a%5Bhref%5E%3D%22%2Fnews%2F%22%5D%5Bclass%2A%3D%22PublicationList%22%5D%2Ca%5Bhref%5E%3D%22%2Fnews%2F%22%5D%5Bclass%2A%3D%22FeaturedGrid%22%5D&itemTitle=span%5Bclass%2A%3D%22__title%22%5D%2Ch2%2Ch3%2Ch4&itemLink=a&itemLinkAttr=href&itemLinkPrefix=https%3A%2F%2Fwww.anthropic.com&itemPubDate=time&itemDesc=p
     site: https://www.anthropic.com/news
     tags: [vendor, blog, rsshub]
   - name: Moonshot AI (Kimi Blog)
