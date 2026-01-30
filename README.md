@@ -27,10 +27,13 @@ Output goes to `data/daily/YYYY-MM-DD.md`.
 
 ## Optional AI summaries
 
-If `OPENAI_API_KEY` is set, the digest is summarized by an OpenAI-compatible API. Otherwise it falls back to a simple extractive list.
+If `ZHIPU_API_KEY` is set, the digest is summarized by Zhipu (GLM-4.7-Flash by default). Otherwise if `OPENAI_API_KEY` is set, it uses an OpenAI-compatible API. If neither is set, it falls back to a simple extractive list.
 
 Environment variables:
-- `OPENAI_API_KEY` (required to enable AI summaries)
+- `ZHIPU_API_KEY` (required to enable Zhipu summaries)
+- `ZHIPU_API_BASE` (default: `https://open.bigmodel.cn/api/paas/v4`)
+- `ZHIPU_MODEL` (default: `glm-4.7-flash`)
+- `OPENAI_API_KEY` (required to enable OpenAI summaries if ZHIPU is not set)
 - `OPENAI_API_BASE` (default: `https://api.openai.com/v1`)
 - `OPENAI_MODEL` (default: `gpt-4o-mini`)
 
@@ -42,7 +45,10 @@ The workflow runs daily and commits new digests back to the repo.
 - Schedule: `0 1 * * *` (UTC)
 
 To enable AI summaries on GitHub Actions, add repository secrets:
-- `OPENAI_API_KEY`
+- `ZHIPU_API_KEY` (recommended)
+- `ZHIPU_API_BASE` (optional)
+- `ZHIPU_MODEL` (optional)
+- `OPENAI_API_KEY` (optional, used only if ZHIPU is not set)
 - `OPENAI_API_BASE` (optional)
 - `OPENAI_MODEL` (optional)
 

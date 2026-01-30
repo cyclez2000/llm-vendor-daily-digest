@@ -27,6 +27,9 @@ jobs:
 
       - name: Run digest
         env:
+          ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
+          ZHIPU_API_BASE: ${{ secrets.ZHIPU_API_BASE }}
+          ZHIPU_MODEL: ${{ secrets.ZHIPU_MODEL }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_API_BASE: ${{ secrets.OPENAI_API_BASE }}
           OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}

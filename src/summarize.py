@@ -13,7 +13,7 @@ from .fetch import Item
 def _truncate(text: str, limit: int = 240) -> str:
     if len(text) <= limit:
         return text
-    return text[: limit - 1].rstrip() + "¡­"
+    return text[: limit - 3].rstrip() + "..."
 
 
 def _group_items(items: Iterable[Item]):
@@ -33,7 +33,7 @@ def _fallback_digest(items: list[Item]) -> str:
     for source in sorted(grouped.keys()):
         lines.append(f"## {source}")
         for item in grouped[source]:
-            summary = f" ¡ª {_truncate(item.summary)}" if item.summary else ""
+            summary = f" - {_truncate(item.summary)}" if item.summary else ""
             lines.append(
                 f"- [{item.title}]({item.link}) ({_format_date(item.published)}){summary}"
             )
@@ -55,10 +55,21 @@ def _openai_chat(messages: list[dict], model: str, api_base: str, api_key: str) 
     return data["choices"][0]["message"]["content"].strip()
 
 
-def summarize_items(items: list[Item], report_date: str) -> str:
+def _resolve_chat_config() -> tuple[str | None, str, str]:
+    zhipu_key = os.getenv("ZHIPU_API_KEY")
+    if zhipu_key:
+        api_base = os.getenv("ZHIPU_API_BASE", "https://open.bigmodel.cn/api/paas/v4")
+        model = os.getenv("ZHIPU_MODEL", "glm-4.7-flash")
+        return zhipu_key, api_base, model
+
     api_key = os.getenv("OPENAI_API_KEY")
     api_base = os.getenv("OPENAI_API_BASE", "https://api.openai.com/v1")
     model = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
+    return api_key, api_base, model
+
+
+def summarize_items(items: list[Item], report_date: str) -> str:
+    api_key, api_base, model = _resolve_chat_config()
 
     if not api_key:
         return _fallback_digest(items)

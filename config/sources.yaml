@@ -5,4 +5,20 @@
 #   site: https://example.com/blog
 #   tags: [vendor, blog]
 
-sources: []
+sources:
+  - name: OpenAI
+    rss: https://openai.com/news/rss.xml
+    site: https://openai.com/news
+    tags: [vendor, blog]
+  - name: Anthropic (Newsroom)
+    rss: https://rsshub.app/transform/html?url=https%3A%2F%2Fwww.anthropic.com%2Fnews&item=a%5Bhref%5E%3D%22%2Fnews%2F%22%5D%5Bclass*%3D%22FeaturedGrid%22%5D&itemTitle=h2%2Ch4&itemLink=a&itemLinkAttr=href&itemLinkPrefix=https%3A%2F%2Fwww.anthropic.com&itemPubDate=time&itemDesc=p
+    site: https://www.anthropic.com/news
+    tags: [vendor, blog, rsshub]
+  - name: Moonshot AI (Kimi Blog)
+    rss: https://rsshub.app/transform/html?url=https%3A%2F%2Fplatform.moonshot.cn%2Fblog&item=div.post-item&itemTitle=h3%20a&itemLink=h3%20a&itemLinkAttr=href&itemLinkPrefix=https%3A%2F%2Fplatform.moonshot.cn&itemPubDate=time&itemPubDateAttr=dateTime
+    site: https://platform.moonshot.cn/blog
+    tags: [vendor, blog, rsshub, kimi]
+  - name: MiniMax (News)
+    rss: https://rsshub.app/transform/json?url=https%3A%2F%2Fwww.minimaxi.com%2Fnezha%2Fzh%2Fnews%3Fpage%3D1&item=data&itemTitle=title&itemLink=slug&itemLinkPrefix=https%3A%2F%2Fwww.minimaxi.com%2Fnews%2F&itemPubDate=publishDate
+    site: https://www.minimaxi.com/news
+    tags: [vendor, news, rsshub]
