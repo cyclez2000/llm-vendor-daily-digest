@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import defaultdict
 from datetime import datetime
 import os
+import sys
 from typing import Iterable
 
 import requests
@@ -101,10 +102,18 @@ def summarize_items(items: list[Item], report_date: str) -> str:
         "Items:\n" + "\n".join(bullets)
     )
 
-    content = _openai_chat(
-        messages=[{"role": "system", "content": system}, {"role": "user", "content": user}],
-        model=model,
-        api_base=api_base,
-        api_key=api_key,
-    )
+    try:
+        content = _openai_chat(
+            messages=[
+                {"role": "system", "content": system},
+                {"role": "user", "content": user},
+            ],
+            model=model,
+            api_base=api_base,
+            api_key=api_key,
+        )
+    except requests.RequestException as exc:
+        print(f"AI summary failed, falling back to extractive list: {exc}", file=sys.stderr)
+        return _fallback_digest(items)
+
     return content.rstrip() + "\n"
