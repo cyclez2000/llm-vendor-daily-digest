@@ -22,3 +22,27 @@ sources:
     rss: https://rsshub.app/transform/json?url=https%3A%2F%2Fwww.minimaxi.com%2Fnezha%2Fzh%2Fnews%3Fpage%3D1&item=data&itemTitle=title&itemLink=slug&itemLinkPrefix=https%3A%2F%2Fwww.minimaxi.com%2Fnews%2F&itemPubDate=publishDate
     site: https://www.minimaxi.com/news
     tags: [vendor, news, rsshub]
+  - name: Google DeepMind (Blog)
+    rss: https://deepmind.google/blog/rss.xml
+    site: https://deepmind.google/blog
+    tags: [vendor, research, blog]
+  - name: Google AI Blog
+    rss: https://blog.google/technology/ai/rss/
+    site: https://blog.google/technology/ai/
+    tags: [vendor, blog]
+  - name: Microsoft AI Blog
+    rss: https://blogs.microsoft.com/ai/feed/
+    site: https://blogs.microsoft.com/ai/
+    tags: [vendor, blog]
+  - name: NVIDIA Deep Learning Blog
+    rss: https://blogs.nvidia.com/blog/category/deep-learning/feed/
+    site: https://blogs.nvidia.com/blog/category/deep-learning/
+    tags: [vendor, blog]
+  - name: Hugging Face Blog
+    rss: https://huggingface.co/blog/feed.xml
+    site: https://huggingface.co/blog
+    tags: [vendor, blog]
+  - name: Together AI Blog
+    rss: https://www.together.ai/blog/rss.xml
+    site: https://www.together.ai/blog
+    tags: [vendor, blog]
