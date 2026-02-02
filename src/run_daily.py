@@ -4,11 +4,13 @@ import argparse
 from datetime import datetime, timedelta
 from pathlib import Path
 import sys
+import os
 
 import yaml
 from dateutil import tz
 
 from .fetch import Source, dedupe_items, fetch_feed, filter_items_by_date
+from .rss import build_rss
 from .summarize import summarize_items
 
 
@@ -84,7 +86,22 @@ def main(argv: list[str]) -> int:
         except Exception as exc:
             print(f"Failed to fetch {source.name}: {exc}", file=sys.stderr)
 
-    items = filter_items_by_date(dedupe_items(all_items), report_date)
+    deduped_items = dedupe_items(all_items)
+    items = filter_items_by_date(deduped_items, report_date)
+
+    # Build an aggregated RSS feed from recent items (latest first).
+    feed_items = sorted(deduped_items, key=lambda i: i.published, reverse=True)[:200]
+    repo = os.getenv("GITHUB_REPOSITORY", "")
+    channel_link = f"https://github.com/{repo}" if repo else "https://github.com/"
+    feed_link = f"https://raw.githubusercontent.com/{repo}/master/feed.xml" if repo else None
+    feed_xml = build_rss(
+        feed_items,
+        channel_title="LLM Vendor Daily Digest",
+        channel_link=channel_link,
+        channel_description="Aggregated RSS feed generated from vendor sources.",
+        feed_link=feed_link,
+    )
+    (_repo_root() / "feed.xml").write_text(feed_xml, encoding="utf-8")
 
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)

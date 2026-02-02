@@ -49,6 +49,7 @@ The workflow runs daily and commits new digests back to the repo.
 
 - File: `.github/workflows/daily.yml`
 - Schedule: `0 1 * * *` (UTC)
+ - Output: `data/daily/YYYY-MM-DD.md` and `feed.xml` (aggregated RSS)
 
 To enable AI summaries on GitHub Actions, add repository secrets:
 - `ZHIPU_API_KEY` (recommended)
@@ -117,6 +118,7 @@ python -m src.run_daily --date 2026-01-29
 
 - 文件：`.github/workflows/daily.yml`
 - 计划任务：`0 1 * * *`（UTC）
+ - 输出：`data/daily/YYYY-MM-DD.md` 与 `feed.xml`（聚合 RSS）
 
 要在 GitHub Actions 上启用 AI 摘要，请添加仓库 Secrets：
 - `ZHIPU_API_KEY`（推荐）
