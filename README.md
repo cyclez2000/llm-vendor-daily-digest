@@ -8,7 +8,7 @@
 
 Daily digest generator for LLM vendors. It collects RSS/Atom feeds and produces:
 - a **daily markdown report** under `data/daily/YYYY-MM-DD.md`
-- an **aggregated RSS feed** at `feed.xml` (subscribe once, get all updates)
+- a **bilingual daily RSS feed** at `feed.xml` (one item per day, ready for subscription)
 
 ### Subscribe (one-click)
 
@@ -18,7 +18,7 @@ After the workflow runs, subscribe to:
 https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml
 ```
 
-This feed aggregates the latest items from all sources (latest first).
+This feed now publishes one entry per day and each entry contains the full bilingual daily digest.
 
 ### Quick start (local)
 
@@ -49,6 +49,8 @@ Schedule: `0 1 * * *` (UTC)
 Outputs:
 - `data/daily/YYYY-MM-DD.md`
 - `feed.xml`
+
+Runtime logs also include a source health table (per source total count, latest date, count on report date, stale/ok status).
 
 ### Optional AI summaries
 
@@ -81,6 +83,7 @@ sources:
 - Only items **published on the target date** are included in the daily report.
 - Some sources use RSSHub. If RSSHub is blocked, the code falls back to direct HTML/JSON parsing.
 - If a date looks empty, check whether the vendor posted on that date.
+- The source health summary helps identify stale feeds whose latest item date is too old.
 
 ---
 
