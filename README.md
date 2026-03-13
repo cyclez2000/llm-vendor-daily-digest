@@ -6,69 +6,100 @@
 
 ## English
 
-Daily digest generator for LLM vendors. It collects RSS/Atom feeds and produces:
-- a **daily markdown report** under `data/daily/YYYY-MM-DD.md`
-- a **bilingual daily RSS feed** at `feed.xml` (one item per day, ready for subscription)
+This project collects vendor RSS/Atom feeds, filters items for a target date, and generates:
 
-### Subscribe (one-click)
+- `data/daily/YYYY-MM-DD.md`: a bilingual daily markdown digest
+- `feed.xml`: a subscription-ready RSS feed where each item is one daily digest
 
-After the workflow runs, subscribe to:
+### Why the digest can look late
 
-```
-https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml
-```
+Freshness depends on two things:
 
-This feed now publishes one entry per day and each entry contains the full bilingual daily digest.
+1. The report date you generate.
+2. How fresh the upstream source feeds are.
 
-### Quick start (local)
+The workflow is configured for `Asia/Hong_Kong` and now runs at `23:30` local time (`30 15 * * *` UTC) so the default report targets the same local calendar day instead of implicitly lagging by UTC.
 
-1. Edit `config/sources.yaml` to add or remove sources.
-2. Install dependencies:
+Runtime logs also print a source health table:
+
+- latest item date per source
+- item count on the report date
+- stale / empty / error status
+
+If a source is stale, the digest will still look behind even when scheduling is correct.
+
+### Quick Start
+
+1. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Run locally (defaults to **yesterday** in local time):
+2. Edit `config/sources.yaml` to add, remove, or replace sources.
+
+3. Run for the current day in your configured timezone:
 
 ```bash
 python -m src.run_daily
 ```
 
-Or specify a date:
+4. Run for a specific date:
 
 ```bash
-python -m src.run_daily --date 2026-01-29
+python -m src.run_daily --date 2026-03-12
 ```
 
-### GitHub Actions
+5. Run for yesterday without hardcoding a date:
 
-Workflow: `.github/workflows/daily.yml`  
-Schedule: `0 1 * * *` (UTC)
+```bash
+python -m src.run_daily --offset-days 1
+```
 
-Outputs:
-- `data/daily/YYYY-MM-DD.md`
-- `feed.xml`
+### Configuration
 
-Runtime logs also include a source health table (per source total count, latest date, count on report date, stale/ok status).
+Supported CLI flags:
 
-### Optional AI summaries
-
-If `ZHIPU_API_KEY` is set, the digest is summarized by Zhipu (GLM-4.7-Flash by default).
-Otherwise, if `OPENAI_API_KEY` is set, it uses an OpenAI-compatible API.
-If neither is set, it falls back to an extractive list.
+- `--date YYYY-MM-DD`: generate a report for one explicit date
+- `--timezone Asia/Hong_Kong`: override the report timezone
+- `--offset-days 1`: shift the default report date back by N days
+- `--stale-days 21`: stale threshold used in source health logs
+- `--feed-limit 60`: number of daily digest entries kept in `feed.xml`
 
 Environment variables:
-- `ZHIPU_API_KEY` (required to enable Zhipu summaries)
+
+- `REPORT_TIMEZONE` (default: system local time)
+- `REPORT_OFFSET_DAYS` (default: `0`)
+- `SOURCE_STALE_DAYS` (default: `21`)
+- `DAILY_FEED_LIMIT` (default: `60`)
+- `ZHIPU_API_KEY`
 - `ZHIPU_API_BASE` (default: `https://open.bigmodel.cn/api/paas/v4`)
 - `ZHIPU_MODEL` (default: `glm-4.7-flash`)
-- `OPENAI_API_KEY` (required if ZHIPU is not set)
+- `OPENAI_API_KEY`
 - `OPENAI_API_BASE` (default: `https://api.openai.com/v1`)
 - `OPENAI_MODEL` (default: `gpt-4o-mini`)
 
-### Sources format
+If no AI API key is configured, the project falls back to an extractive bilingual list.
 
-`config/sources.yaml` example:
+### GitHub Actions
+
+Workflow: `.github/workflows/daily.yml`
+
+- Schedule: `30 15 * * *` UTC
+- Local schedule in Hong Kong: `23:30`
+- Output files: `data/daily/YYYY-MM-DD.md`, `feed.xml`
+
+### Feed Subscription
+
+Repository feed:
+
+```text
+https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml
+```
+
+### Sources
+
+`config/sources.yaml` format:
 
 ```yaml
 sources:
@@ -78,78 +109,113 @@ sources:
     tags: [vendor, blog]
 ```
 
-### Notes & troubleshooting
+Current sources include official feeds plus selected RSSHub transforms for sites without stable RSS.
 
-- Only items **published on the target date** are included in the daily report.
-- Some sources use RSSHub. If RSSHub is blocked, the code falls back to direct HTML/JSON parsing.
-- If a date looks empty, check whether the vendor posted on that date.
-- The source health summary helps identify stale feeds whose latest item date is too old.
+### Troubleshooting
+
+- No items for a day: the vendor may not have published on that date.
+- A source shows `stale`: the upstream feed or selector likely needs replacement.
+- A source shows `error`: check network access, RSSHub availability, or page structure changes.
+- If the digest feels late, check both the report date and the source health summary before assuming the scheduler is wrong.
 
 ---
 
 ## 中文
 
-这是一个大模型厂商的日报生成器，会抓取 RSS/Atom 源并生成：
-- **每日 Markdown 摘要**：`data/daily/YYYY-MM-DD.md`
-- **聚合 RSS 订阅**：`feed.xml`（一次订阅即可获取所有更新）
+这个项目会抓取大模型厂商的 RSS/Atom 源，按目标日期过滤内容，并生成：
 
-### 一键订阅
+- `data/daily/YYYY-MM-DD.md`：中英双语日报
+- `feed.xml`：可直接订阅的聚合 RSS，每天一条日报
 
-工作流跑完后，订阅：
+### 为什么会感觉“慢两天”
 
-```
-https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml
-```
+日报是否及时，取决于两个因素：
 
-该订阅会汇总所有来源的最新更新（按时间倒序）。
+1. 生成时使用的是哪一天作为目标日期。
+2. 上游源本身是不是新鲜。
 
-### 本地快速开始
+现在工作流已经固定按 `Asia/Hong_Kong` 时区运行，并改为在香港时间 `23:30` 执行（UTC 为 `30 15 * * *`），默认抓取“当天”而不是受 GitHub runner 的 UTC 时区影响后再隐性滞后。
 
-1. 编辑 `config/sources.yaml` 添加/删除来源。
-2. 安装依赖：
+运行日志还会输出 source health 表，包含：
+
+- 每个源的最新条目日期
+- 目标日期当天命中的条目数
+- `stale / empty / error` 状态
+
+如果某个源已经 stale，就算调度时间正确，日报看起来也会偏旧。
+
+### 快速开始
+
+1. 安装依赖：
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. 本地运行（默认使用本地时间“昨天”）：
+2. 编辑 `config/sources.yaml`，添加、删除或替换抓取源。
+
+3. 按当前时区的“当天”生成日报：
 
 ```bash
 python -m src.run_daily
 ```
 
-或指定日期：
+4. 指定某一天生成：
 
 ```bash
-python -m src.run_daily --date 2026-01-29
+python -m src.run_daily --date 2026-03-12
 ```
 
-### GitHub Actions
+5. 不写死日期，直接生成“昨天”：
 
-工作流：`.github/workflows/daily.yml`  
-计划任务：`0 1 * * *`（UTC）
+```bash
+python -m src.run_daily --offset-days 1
+```
 
-输出：
-- `data/daily/YYYY-MM-DD.md`
-- `feed.xml`
+### 配置项
 
-### 可选 AI 摘要
+支持的命令行参数：
 
-设置 `ZHIPU_API_KEY` 后使用智谱（默认 GLM-4.7-Flash）生成摘要。
-如果没有智谱 Key，但设置了 `OPENAI_API_KEY`，则使用 OpenAI 兼容接口。
-都未设置时回退为抽取式列表。
+- `--date YYYY-MM-DD`：指定日报日期
+- `--timezone Asia/Hong_Kong`：覆盖默认时区
+- `--offset-days 1`：默认日期向前偏移 N 天
+- `--stale-days 21`：source health 中判断 stale 的阈值
+- `--feed-limit 60`：`feed.xml` 中保留多少天日报
 
 环境变量：
-- `ZHIPU_API_KEY`（启用智谱摘要必需）
+
+- `REPORT_TIMEZONE`（默认：系统本地时区）
+- `REPORT_OFFSET_DAYS`（默认：`0`）
+- `SOURCE_STALE_DAYS`（默认：`21`）
+- `DAILY_FEED_LIMIT`（默认：`60`）
+- `ZHIPU_API_KEY`
 - `ZHIPU_API_BASE`（默认：`https://open.bigmodel.cn/api/paas/v4`）
 - `ZHIPU_MODEL`（默认：`glm-4.7-flash`）
-- `OPENAI_API_KEY`（未设置智谱时必需）
+- `OPENAI_API_KEY`
 - `OPENAI_API_BASE`（默认：`https://api.openai.com/v1`）
 - `OPENAI_MODEL`（默认：`gpt-4o-mini`）
 
-### 来源格式
+如果没有配置 AI Key，项目会回退到抽取式的中英双语列表。
 
-`config/sources.yaml` 示例：
+### GitHub Actions
+
+工作流：`.github/workflows/daily.yml`
+
+- UTC cron：`30 15 * * *`
+- 香港时间：`23:30`
+- 输出文件：`data/daily/YYYY-MM-DD.md`、`feed.xml`
+
+### RSS 订阅
+
+仓库聚合订阅地址：
+
+```text
+https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml
+```
+
+### 源配置
+
+`config/sources.yaml` 格式如下：
 
 ```yaml
 sources:
@@ -159,8 +225,14 @@ sources:
     tags: [vendor, blog]
 ```
 
-### 说明与排查
+当前配置同时包含：
 
-- 每日日报只包含**目标日期当天**发布的内容。
-- 部分来源使用 RSSHub，若被拦截会自动回退为直连解析。
-- 某天为空通常是该厂商当日没有更新。
+- 官方 RSS/Atom 源
+- 对没有稳定 RSS 的站点使用 RSSHub transform
+
+### 排查建议
+
+- 某天没有内容：通常是厂商当天没有发布。
+- 源状态为 `stale`：通常表示上游 feed 太旧，或者页面选择器失效，需要替换。
+- 源状态为 `error`：优先检查网络、RSSHub 可用性和页面结构变更。
+- 如果体感“慢”，先看目标日期和 source health，再判断是不是调度问题。

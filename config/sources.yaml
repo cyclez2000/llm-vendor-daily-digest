@@ -30,10 +30,10 @@ sources:
     rss: https://blog.google/technology/ai/rss/
     site: https://blog.google/technology/ai/
     tags: [vendor, blog]
-  - name: Microsoft AI Blog
-    rss: https://blogs.microsoft.com/ai/feed/
-    site: https://blogs.microsoft.com/ai/
-    tags: [vendor, blog]
+  - name: Microsoft AI News
+    rss: https://news.microsoft.com/source/topics/ai/feed/
+    site: https://news.microsoft.com/source/topics/ai/
+    tags: [vendor, news]
   - name: NVIDIA Deep Learning Blog
     rss: https://blogs.nvidia.com/blog/category/deep-learning/feed/
     site: https://blogs.nvidia.com/blog/category/deep-learning/
@@ -46,3 +46,27 @@ sources:
     rss: https://www.together.ai/blog/rss.xml
     site: https://www.together.ai/blog
     tags: [vendor, blog]
+  - name: AWS Machine Learning Blog
+    rss: https://aws.amazon.com/blogs/machine-learning/feed/
+    site: https://aws.amazon.com/blogs/machine-learning/
+    tags: [vendor, cloud, blog, aws]
+  - name: AWS News Blog (AI)
+    rss: https://aws.amazon.com/blogs/aws/category/artificial-intelligence/feed/
+    site: https://aws.amazon.com/blogs/aws/category/artificial-intelligence/
+    tags: [vendor, cloud, news, aws]
+  - name: Stability AI News
+    rss: https://stability.ai/news/rss.xml
+    site: https://stability.ai/news
+    tags: [vendor, news, stability]
+  - name: Alibaba Qwen Blog
+    rss: https://qwenlm.github.io/blog/index.xml
+    site: https://qwenlm.github.io/blog
+    tags: [vendor, blog, qwen, alibaba]
+  - name: Baidu AI Platform News (Wenxin)
+    rss: https://rsshub.app/transform/html?url=https%3A%2F%2Fai.baidu.com%2Fsupport%2Fnews&item=div.ai-newscenter-news-info&itemTitle=a.ai-newscenter-news-title&itemLink=a.ai-newscenter-news-title&itemLinkAttr=href&itemLinkPrefix=https%3A%2F%2Fai.baidu.com&itemPubDate=span.ai-newscenter-news-time&itemDesc=div.ai-newscenter-news-desc
+    site: https://ai.baidu.com/support/news
+    tags: [vendor, news, rsshub, baidu, wenxin]
+  - name: Zhipu (News)
+    rss: https://rsshub.app/transform/html?url=https%3A%2F%2Fwww.zhipuai.cn%2Fzh%2Fnews&item=a%5Bhref%5E%3D%22%2Fzh%2Fnews%2F%22%5D&itemTitle=h3&itemLink=a&itemLinkAttr=href&itemLinkPrefix=https%3A%2F%2Fwww.zhipuai.cn&itemPubDate=p.text-base&itemDesc=span.line-clamp-4
+    site: https://www.zhipuai.cn/zh/news
+    tags: [vendor, news, rsshub, zhipu]

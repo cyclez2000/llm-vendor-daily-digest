@@ -70,7 +70,18 @@ def _parse_args(argv: list[str]) -> argparse.Namespace:
     )
     parser.add_argument(
         "--date",
-        help="Report date (YYYY-MM-DD). Defaults to yesterday in local time.",
+        help="Report date (YYYY-MM-DD). Defaults to today in the configured timezone.",
+    )
+    parser.add_argument(
+        "--timezone",
+        default=os.getenv("REPORT_TIMEZONE", "").strip(),
+        help="IANA timezone, for example Asia/Hong_Kong. Defaults to system local time.",
+    )
+    parser.add_argument(
+        "--offset-days",
+        type=int,
+        default=int(os.getenv("REPORT_OFFSET_DAYS", "0")),
+        help="Shift the default report date by N days. Use 1 to report yesterday.",
     )
     parser.add_argument(
         "--stale-days",
@@ -85,6 +96,15 @@ def _parse_args(argv: list[str]) -> argparse.Namespace:
         help="Maximum number of daily digest entries included in feed.xml.",
     )
     return parser.parse_args(argv)
+
+
+def _resolve_timezone(name: str | None):
+    if name:
+        resolved = tz.gettz(name)
+        if resolved is not None:
+            return resolved
+        print(f"Unknown timezone '{name}', falling back to system local time.", file=sys.stderr)
+    return tz.tzlocal()
 
 
 def _resolve_repo_slug() -> str:
@@ -219,7 +239,7 @@ def _print_source_health(rows: list[SourceHealth], report_date: date, stale_days
 
 def main(argv: list[str]) -> int:
     args = _parse_args(argv)
-    local_tz = tz.tzlocal()
+    local_tz = _resolve_timezone(args.timezone)
 
     if args.date:
         try:
@@ -228,7 +248,7 @@ def main(argv: list[str]) -> int:
             print("Invalid --date format, expected YYYY-MM-DD", file=sys.stderr)
             return 2
     else:
-        report_date = (datetime.now(local_tz) - timedelta(days=1)).date()
+        report_date = (datetime.now(local_tz) - timedelta(days=args.offset_days)).date()
 
     sources = _load_sources(Path(args.config))
     if not sources:
