@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>LLM Vendor Daily Digest</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest</link><description>Bilingual daily digests generated from vendor sources.</description><atom:link href="https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml" rel="self" type="application/rss+xml" /><item><title>Daily Digest / 日报摘要 (2026-03-14)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-14.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-14.md</guid><pubDate>Sat, 14 Mar 2026 04:00:00 +0000</pubDate><description>No items found for this date. / 当日未找到相关条目。</description></item><item><title>Daily Digest / 日报摘要 (2026-03-11)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-11.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-11.md</guid><pubDate>Wed, 11 Mar 2026 04:00:00 +0000</pubDate><description>## English
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>LLM Vendor Daily Digest</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest</link><description>Bilingual daily digests generated from vendor sources.</description><atom:link href="https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml" rel="self" type="application/rss+xml" /><item><title>Daily Digest / 日报摘要 (2026-03-14)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-14.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-14.md</guid><pubDate>Sat, 14 Mar 2026 04:00:00 +0000</pubDate><description>## English
+### AWS Machine Learning Blog
+- [P-EAGLE: Faster LLM inference with Parallel Speculative Decoding in vLLM](https://aws.amazon.com/blogs/machine-learning/p-eagle-faster-llm-inference-with-parallel-speculative-decoding-in-vllm/) (2026-03-14 03:27) - In this post, we explain how P-EAGLE works, how we integrated it into vLLM starting from v0.16.0 (PR#32887), and how to serve it with our pre-trained checkpoints.
+
+### Hugging Face Blog
+- [Beyond Semantic Similarity: Introducing NVIDIA NeMo Retriever’s Generalizable Agentic Retrieval Pipeline](https://huggingface.co/blog/nvidia/nemo-retriever-agentic-retrieval) (2026-03-14 04:00)
+
+## 中文
+### AWS Machine Learning Blog
+- [P-EAGLE: Faster LLM inference with Parallel Speculative Decoding in vLLM](https://aws.amazon.com/blogs/machine-learning/p-eagle-faster-llm-inference-with-parallel-speculative-decoding-in-vllm/) (2026-03-14 03:27) - In this post, we explain how P-EAGLE works, how we integrated it into vLLM starting from v0.16.0 (PR#32887), and how to serve it with our pre-trained checkpoints.
+
+### Hugging Face Blog
+- [Beyond Semantic Similarity: Introducing NVIDIA NeMo Retriever’s Generalizable Agentic Retrieval Pipeline](https://huggingface.co/blog/nvidia/nemo-retriever-agentic-retrieval) (2026-03-14 04:00)</description></item><item><title>Daily Digest / 日报摘要 (2026-03-11)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-11.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-11.md</guid><pubDate>Wed, 11 Mar 2026 04:00:00 +0000</pubDate><description>## English
 ### Anthropic (Newsroom)
 - [Introducing The Anthropic Institute](https://www.anthropic.com/news/the-anthropic-institute) (2026-03-11 00:00)
 
