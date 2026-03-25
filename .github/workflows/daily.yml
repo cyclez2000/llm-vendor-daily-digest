@@ -28,7 +28,7 @@ jobs:
       - name: Run digest
         env:
           REPORT_TIMEZONE: Asia/Hong_Kong
-          REPORT_OFFSET_DAYS: '0'
+          REPORT_OFFSET_DAYS: '1'
           ZHIPU_API_KEY: ${{ secrets.ZHIPU_API_KEY }}
           ZHIPU_API_BASE: ${{ secrets.ZHIPU_API_BASE }}
           ZHIPU_MODEL: ${{ secrets.ZHIPU_MODEL }}

@@ -18,7 +18,7 @@ Freshness depends on two things:
 1. The report date you generate.
 2. How fresh the upstream source feeds are.
 
-The workflow is configured for `Asia/Hong_Kong` and now runs at `23:30` local time (`30 15 * * *` UTC) so the default report targets the same local calendar day instead of implicitly lagging by UTC.
+The workflow is configured for `Asia/Hong_Kong` and now runs at `23:30` local time (`30 15 * * *` UTC). Scheduled runs default to reporting yesterday so delayed GitHub Actions starts after midnight do not produce false-empty digests for the new day.
 
 Runtime logs also print a source health table:
 
@@ -69,7 +69,7 @@ Supported CLI flags:
 Environment variables:
 
 - `REPORT_TIMEZONE` (default: system local time)
-- `REPORT_OFFSET_DAYS` (default: `0`)
+- `REPORT_OFFSET_DAYS` (default: `0`; the scheduled GitHub workflow sets it to `1`)
 - `SOURCE_STALE_DAYS` (default: `21`)
 - `DAILY_FEED_LIMIT` (default: `60`)
 - `ZHIPU_API_KEY`
@@ -87,6 +87,7 @@ Workflow: `.github/workflows/daily.yml`
 
 - Schedule: `30 15 * * *` UTC
 - Local schedule in Hong Kong: `23:30`
+- Scheduled runs default to generating yesterday's digest
 - Output files: `data/daily/YYYY-MM-DD.md`, `feed.xml`
 
 ### Feed Subscription
@@ -134,7 +135,7 @@ Current sources include official feeds plus selected RSSHub transforms for sites
 1. 生成时使用的是哪一天作为目标日期。
 2. 上游源本身是不是新鲜。
 
-现在工作流已经固定按 `Asia/Hong_Kong` 时区运行，并改为在香港时间 `23:30` 执行（UTC 为 `30 15 * * *`），默认抓取“当天”而不是受 GitHub runner 的 UTC 时区影响后再隐性滞后。
+现在工作流已经固定按 `Asia/Hong_Kong` 时区运行，并改为在香港时间 `23:30` 执行（UTC 为 `30 15 * * *`）。为避免 GitHub Actions 偶发延迟到午夜后才启动而产生“假空日报”，定时任务默认抓取“昨天”而不是“当天”。
 
 运行日志还会输出 source health 表，包含：
 
@@ -185,7 +186,7 @@ python -m src.run_daily --offset-days 1
 环境变量：
 
 - `REPORT_TIMEZONE`（默认：系统本地时区）
-- `REPORT_OFFSET_DAYS`（默认：`0`）
+- `REPORT_OFFSET_DAYS`（默认：`0`；GitHub 定时任务会将其设为 `1`）
 - `SOURCE_STALE_DAYS`（默认：`21`）
 - `DAILY_FEED_LIMIT`（默认：`60`）
 - `ZHIPU_API_KEY`
@@ -203,6 +204,7 @@ python -m src.run_daily --offset-days 1
 
 - UTC cron：`30 15 * * *`
 - 香港时间：`23:30`
+- 定时任务默认生成“昨天”的日报
 - 输出文件：`data/daily/YYYY-MM-DD.md`、`feed.xml`
 
 ### RSS 订阅
