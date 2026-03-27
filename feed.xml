@@ -1,5 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>LLM Vendor Daily Digest</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest</link><description>Bilingual daily digests generated from vendor sources.</description><atom:link href="https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml" rel="self" type="application/rss+xml" /><item><title>Daily Digest / 日报摘要 (2026-03-26)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-26.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-26.md</guid><pubDate>Thu, 26 Mar 2026 04:00:00 +0000</pubDate><description>## English
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>LLM Vendor Daily Digest</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest</link><description>Bilingual daily digests generated from vendor sources.</description><atom:link href="https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml" rel="self" type="application/rss+xml" /><item><title>Daily Digest / 日报摘要 (2026-03-27)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-27.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-27.md</guid><pubDate>Fri, 27 Mar 2026 04:00:00 +0000</pubDate><description>## English
+
+### AWS
+*   AWS introduces a new Bidirectional Streaming API for Amazon Polly, enabling real-time text-to-speech synthesis where audio can be generated as text arrives, ideal for conversational AI and LLMs. [Link](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-polly-bidirectional-streaming-real-time-speech-synthesis-for-conversational-ai/)
+*   AWS demonstrates how to accelerate LLM fine-tuning using unstructured data stored in S3 by integrating it with Amazon SageMaker Unified Studio for visual question answering tasks. [Link](https://aws.amazon.com/blogs/machine-learning/accelerating-llm-fine-tuning-with-unstructured-data-using-sagemaker-unified-studio-and-s3/)
+*   AWS provides a guide on building age-responsive, context-aware AI systems using Amazon Bedrock Guardrails and a serverless architecture to ensure responsible and compliant AI deployment. [Link](https://aws.amazon.com/blogs/machine-learning/building-age-responsive-context-aware-ai-with-amazon-bedrock-guardrails/)
+*   Amazon Bedrock is now available in the Asia Pacific (New Zealand) Region (ap-southeast-6), enabling customers to run inference for Anthropic and Amazon models with cross-region capabilities. [Link](https://aws.amazon.com/blogs/machine-learning/run-generative-ai-inference-with-amazon-bedrock-in-asia-pacific-new-zealand/)
+
+### Google
+*   Google Translate&amp;#x27;s Live Translate feature with headphones is officially launching on iOS, expanding availability to more countries for both iOS and Android users. [Link](https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/)
+*   In the latest episode of the Dialogues on Technology and Society series, James Manyika discusses AI and creativity with rapper LL COOL J. [Link](https://blog.google/innovation-and-ai/technology/ai/ll-cool-j-dialogues/)
+
+## 中文
+
+### AWS
+*   AWS 推出 Amazon Polly 双向流式 API，支持在文本发送的同时实时接收音频，非常适合对话式 AI 和大语言模型。 [链接](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-polly-bidirectional-streaming-real-time-speech-synthesis-for-conversational-ai/)
+*   AWS 展示了如何通过将 S3 与 Amazon SageMaker Unified Studio 集成，利用存储在 S3 中的非结构化数据加速大语言模型的微调，以实现视觉问答。 [链接](https://aws.amazon.com/blogs/machine-learning/accelerating-llm-fine-tuning-with-unstructured-data-using-sagemaker-unified-studio-and-s3/)
+*   AWS 提供了使用 Amazon Bedrock Guardrails 和无服务器架构构建年龄响应式、上下文感知 AI 系统的指南，以确保负责任且合规的 AI 部署。 [链接](https://aws.amazon.com/blogs/machine-learning/building-age-responsive-context-aware-ai-with-amazon-bedrock-guardrails/)
+*   Amazon Bedrock 现已在亚太（新西兰）区域（ap-southeast-6）上线，客户现在可以跨区域运行 Anthropic 和 Amazon 模型的推理。 [链接](https://aws.amazon.com/blogs/machine-learning/run-generative-ai-inference-with-amazon-bedrock-in-asia-pacific-new-zealand/)
+
+### Google
+*   Google Translate 的耳机实时翻译功能正式登陆 iOS，并扩展到了更多国家，适用于 iOS 和 Android 用户。 [链接](https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/)
+*   在“技术与社会对话”系列的最新一集中，James Manyika 与说唱歌手 LL COOL J 讨论了 AI 与创造力。 [链接](https://blog.google/innovation-and-ai/technology/ai/ll-cool-j-dialogues/)</description></item><item><title>Daily Digest / 日报摘要 (2026-03-26)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-26.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-26.md</guid><pubDate>Thu, 26 Mar 2026 04:00:00 +0000</pubDate><description>## English
 
 ### AWS Machine Learning Blog
 *   Walks through the end-to-end workflow of using reinforcement fine-tuning (RFT) on Amazon Bedrock with OpenAI-compatible APIs, covering authentication setup, Lambda-based reward functions, and inference. [Link](https://aws.amazon.com/blogs/machine-learning/reinforcement-fine-tuning-on-amazon-bedrock-with-openai-compatible-apis-a-technical-walkthrough/)
