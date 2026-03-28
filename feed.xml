@@ -1,27 +1,35 @@
 <?xml version='1.0' encoding='utf-8'?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>LLM Vendor Daily Digest</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest</link><description>Bilingual daily digests generated from vendor sources.</description><atom:link href="https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml" rel="self" type="application/rss+xml" /><item><title>Daily Digest / 日报摘要 (2026-03-27)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-27.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-27.md</guid><pubDate>Fri, 27 Mar 2026 04:00:00 +0000</pubDate><description>## English
 
-### AWS
-*   AWS introduces a new Bidirectional Streaming API for Amazon Polly, enabling real-time text-to-speech synthesis where audio can be generated as text arrives, ideal for conversational AI and LLMs. [Link](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-polly-bidirectional-streaming-real-time-speech-synthesis-for-conversational-ai/)
-*   AWS demonstrates how to accelerate LLM fine-tuning using unstructured data stored in S3 by integrating it with Amazon SageMaker Unified Studio for visual question answering tasks. [Link](https://aws.amazon.com/blogs/machine-learning/accelerating-llm-fine-tuning-with-unstructured-data-using-sagemaker-unified-studio-and-s3/)
-*   AWS provides a guide on building age-responsive, context-aware AI systems using Amazon Bedrock Guardrails and a serverless architecture to ensure responsible and compliant AI deployment. [Link](https://aws.amazon.com/blogs/machine-learning/building-age-responsive-context-aware-ai-with-amazon-bedrock-guardrails/)
-*   Amazon Bedrock is now available in the Asia Pacific (New Zealand) Region (ap-southeast-6), enabling customers to run inference for Anthropic and Amazon models with cross-region capabilities. [Link](https://aws.amazon.com/blogs/machine-learning/run-generative-ai-inference-with-amazon-bedrock-in-asia-pacific-new-zealand/)
+### AWS Machine Learning Blog
+*   Announcing the new Bidirectional Streaming API for Amazon Polly, enabling real-time text-to-speech synthesis where audio can start streaming before the full text is available, ideal for conversational AI and LLMs. [Link](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-polly-bidirectional-streaming-real-time-speech-synthesis-for-conversational-ai/)
+*   Demonstrates how to integrate Amazon S3 general purpose buckets with Amazon SageMaker Catalog to fine-tune Llama 3.2 11B Vision Instruct for visual question answering using SageMaker Unified Studio. [Link](https://aws.amazon.com/blogs/machine-learning/accelerating-llm-fine-tuning-with-unstructured-data-using-sagemaker-unified-studio-and-s3/)
+*   Walks through building a serverless, context-aware AI solution using Amazon Bedrock Guardrails to ensure responsible AI deployment and compliance for vulnerable populations. [Link](https://aws.amazon.com/blogs/machine-learning/building-age-responsive-context-aware-ai-with-amazon-bedrock-guardrails/)
+*   Amazon Bedrock is now available in the Asia Pacific (New Zealand) Region (ap-southeast-6), allowing customers to access Anthropic Claude and Amazon Nova models directly with cross-region inference capabilities. [Link](https://aws.amazon.com/blogs/machine-learning/run-generative-ai-inference-with-amazon-bedrock-in-asia-pacific-new-zealand/)
 
-### Google
-*   Google Translate&amp;#x27;s Live Translate feature with headphones is officially launching on iOS, expanding availability to more countries for both iOS and Android users. [Link](https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/)
-*   In the latest episode of the Dialogues on Technology and Society series, James Manyika discusses AI and creativity with rapper LL COOL J. [Link](https://blog.google/innovation-and-ai/technology/ai/ll-cool-j-dialogues/)
+### Google AI Blog
+*   Google Translate’s Live translate with headphones is officially launching on iOS, expanding the feature to more countries for both iOS and Android users. [Link](https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/)
+*   James Manyika discusses AI and creativity with LL COOL J in the latest episode of the Dialogues on Technology and Society series. [Link](https://blog.google/innovation-and-ai/technology/ai/ll-cool-j-dialogues/)
+
+### Hugging Face Blog
+*   Announcing the release of OpenClaw, a new open-source project. [Link](https://huggingface.co/blog/liberate-your-openclaw)
+
+***
 
 ## 中文
 
-### AWS
-*   AWS 推出 Amazon Polly 双向流式 API，支持在文本发送的同时实时接收音频，非常适合对话式 AI 和大语言模型。 [链接](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-polly-bidirectional-streaming-real-time-speech-synthesis-for-conversational-ai/)
-*   AWS 展示了如何通过将 S3 与 Amazon SageMaker Unified Studio 集成，利用存储在 S3 中的非结构化数据加速大语言模型的微调，以实现视觉问答。 [链接](https://aws.amazon.com/blogs/machine-learning/accelerating-llm-fine-tuning-with-unstructured-data-using-sagemaker-unified-studio-and-s3/)
-*   AWS 提供了使用 Amazon Bedrock Guardrails 和无服务器架构构建年龄响应式、上下文感知 AI 系统的指南，以确保负责任且合规的 AI 部署。 [链接](https://aws.amazon.com/blogs/machine-learning/building-age-responsive-context-aware-ai-with-amazon-bedrock-guardrails/)
-*   Amazon Bedrock 现已在亚太（新西兰）区域（ap-southeast-6）上线，客户现在可以跨区域运行 Anthropic 和 Amazon 模型的推理。 [链接](https://aws.amazon.com/blogs/machine-learning/run-generative-ai-inference-with-amazon-bedrock-in-asia-pacific-new-zealand/)
+### AWS Machine Learning Blog
+*   宣布 Amazon Polly 双向流式 API，允许在文本完全可用之前就开始流式传输音频，非常适合对话式 AI 和大语言模型。 [链接](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-polly-bidirectional-streaming-real-time-speech-synthesis-for-conversational-ai/)
+*   演示了如何将 Amazon S3 通用存储桶与 SageMaker Catalog 集成，以使用 SageMaker Unified Studio 微调 Llama 3.2 11B Vision Instruct 模型进行视觉问答。 [链接](https://aws.amazon.com/blogs/machine-learning/accelerating-llm-fine-tuning-with-unstructured-data-using-sagemaker-unified-studio-and-s3/)
+*   演示了如何使用 Amazon Bedrock Guardrails 构建无服务器、上下文感知的 AI 解决方案，以确保负责任的 AI 部署并符合弱势群体的合规要求。 [链接](https://aws.amazon.com/blogs/machine-learning/building-age-responsive-context-aware-ai-with-amazon-bedrock-guardrails/)
+*   Amazon Bedrock 现已在亚太（新西兰）区域（ap-southeast-6）上线，客户可以直接使用跨区域推理功能访问 Anthropic Claude 和 Amazon Nova 模型。 [链接](https://aws.amazon.com/blogs/machine-learning/run-generative-ai-inference-with-amazon-bedrock-in-asia-pacific-new-zealand/)
 
-### Google
-*   Google Translate 的耳机实时翻译功能正式登陆 iOS，并扩展到了更多国家，适用于 iOS 和 Android 用户。 [链接](https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/)
-*   在“技术与社会对话”系列的最新一集中，James Manyika 与说唱歌手 LL COOL J 讨论了 AI 与创造力。 [链接](https://blog.google/innovation-and-ai/technology/ai/ll-cool-j-dialogues/)</description></item><item><title>Daily Digest / 日报摘要 (2026-03-26)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-26.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-26.md</guid><pubDate>Thu, 26 Mar 2026 04:00:00 +0000</pubDate><description>## English
+### Google AI Blog
+*   Google Translate 的耳机实时翻译功能正式登陆 iOS，并将该功能扩展到更多国家/地区，供 iOS 和 Android 用户使用。 [链接](https://blog.google/products-and-platforms/products/translate/live-translate-with-headphones/)
+*   James Manyika 在“技术与社会对话”系列最新一集中与 LL COOL J 探讨了 AI 与创造力。 [链接](https://blog.google/innovation-and-ai/technology/ai/ll-cool-j-dialogues/)
+
+### Hugging Face Blog
+*   宣布 OpenClaw 的发布，这是一个新的开源项目。 [链接](https://huggingface.co/blog/liberate-your-openclaw)</description></item><item><title>Daily Digest / 日报摘要 (2026-03-26)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-26.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-26.md</guid><pubDate>Thu, 26 Mar 2026 04:00:00 +0000</pubDate><description>## English
 
 ### AWS Machine Learning Blog
 *   Walks through the end-to-end workflow of using reinforcement fine-tuning (RFT) on Amazon Bedrock with OpenAI-compatible APIs, covering authentication setup, Lambda-based reward functions, and inference. [Link](https://aws.amazon.com/blogs/machine-learning/reinforcement-fine-tuning-on-amazon-bedrock-with-openai-compatible-apis-a-technical-walkthrough/)
