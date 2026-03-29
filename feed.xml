@@ -1,5 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>LLM Vendor Daily Digest</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest</link><description>Bilingual daily digests generated from vendor sources.</description><atom:link href="https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml" rel="self" type="application/rss+xml" /><item><title>Daily Digest / 日报摘要 (2026-03-27)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-27.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-27.md</guid><pubDate>Fri, 27 Mar 2026 04:00:00 +0000</pubDate><description>## English
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>LLM Vendor Daily Digest</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest</link><description>Bilingual daily digests generated from vendor sources.</description><atom:link href="https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml" rel="self" type="application/rss+xml" /><item><title>Daily Digest / 日报摘要 (2026-03-28)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-28.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-28.md</guid><pubDate>Sat, 28 Mar 2026 04:00:00 +0000</pubDate><description>## English
+
+### OpenAI
+*   STADLER uses ChatGPT to transform knowledge work, saving time and accelerating productivity across 650 employees. [Source](https://openai.com/index/stadler)
+
+## 中文
+
+### OpenAI
+*   STADLER利用ChatGPT重塑知识工作，为650名员工节省时间并提升生产力。 [来源](https://openai.com/index/stadler)</description></item><item><title>Daily Digest / 日报摘要 (2026-03-27)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-27.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-27.md</guid><pubDate>Fri, 27 Mar 2026 04:00:00 +0000</pubDate><description>## English
 
 ### AWS Machine Learning Blog
 *   Announcing the new Bidirectional Streaming API for Amazon Polly, enabling real-time text-to-speech synthesis where audio can start streaming before the full text is available, ideal for conversational AI and LLMs. [Link](https://aws.amazon.com/blogs/machine-learning/introducing-amazon-polly-bidirectional-streaming-real-time-speech-synthesis-for-conversational-ai/)
