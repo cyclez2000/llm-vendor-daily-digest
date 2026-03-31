@@ -1,5 +1,31 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>LLM Vendor Daily Digest</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest</link><description>Bilingual daily digests generated from vendor sources.</description><atom:link href="https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml" rel="self" type="application/rss+xml" /><item><title>Daily Digest / 日报摘要 (2026-03-30)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-30.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-30.md</guid><pubDate>Mon, 30 Mar 2026 04:00:00 +0000</pubDate><description>## English
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>LLM Vendor Daily Digest</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest</link><description>Bilingual daily digests generated from vendor sources.</description><atom:link href="https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml" rel="self" type="application/rss+xml" /><item><title>Daily Digest / 日报摘要 (2026-03-31)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-31.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-31.md</guid><pubDate>Tue, 31 Mar 2026 04:00:00 +0000</pubDate><description>## English
+
+### AWS
+AWS introduces AI Risk Intelligence (AIRI) to help enterprises govern agents at scale, addressing the dynamic interactions of agentic workloads. [Link](https://aws.amazon.com/blogs/machine-learning/can-your-governance-keep-pace-with-your-ai-ambitions-ai-risk-intelligence-in-the-agentic-era/)
+
+### Hugging Face
+Hugging Face releases TRL v1.0, a post-training library designed to evolve alongside the field&amp;#x27;s advancements. [Link](https://huggingface.co/blog/trl-v1)
+
+### Hugging Face
+Hugging Face introduces the Granite 4.0 3B Vision model, offering compact multimodal intelligence tailored for enterprise document processing. [Link](https://huggingface.co/blog/ibm-granite/granite-4-vision)
+
+### Zhipu AI
+Zhipu AI releases its first performance report, marking a significant step in exploring the upper limits of AGI. [Link](https://www.zhipuai.cn/zh/news/152)
+
+## 中文
+
+### AWS
+AWS 发布 AI Risk Intelligence (AIRI)，旨在帮助企业在规模化治理智能体时应对智能体工作负载的动态交互。 [链接](https://aws.amazon.com/blogs/machine-learning/can-your-governance-keep-pace-with-your-ai-ambitions-ai-risk-intelligence-in-the-agentic-era/)
+
+### Hugging Face
+Hugging Face 发布 TRL v1.0，这是一个旨在跟随领域发展而进化的后训练库。 [链接](https://huggingface.co/blog/trl-v1)
+
+### Hugging Face
+Hugging Face 推出 Granite 4.0 3B Vision 模型，为企业文档处理提供紧凑的多模态智能。 [链接](https://huggingface.co/blog/ibm-granite/granite-4-vision)
+
+### 智谱 AI
+智谱 AI 发布首份业绩报告，标志着其在探索 AGI 智能上界方面迈出了重要一步。 [链接](https://www.zhipuai.cn/zh/news/152)</description></item><item><title>Daily Digest / 日报摘要 (2026-03-30)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-30.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-03-30.md</guid><pubDate>Mon, 30 Mar 2026 04:00:00 +0000</pubDate><description>## English
 
 ### AWS Machine Learning Blog
 *   Walk through use cases for enhancing viewer experiences using Strands Agents SDK, Amazon Bedrock AgentCore, and Amazon Nova Sonic 2.0 to create a personal entertainment concierge. | https://aws.amazon.com/blogs/machine-learning/deliver-hyper-personalized-viewer-experiences-with-an-agentic-ai-movie-assistant-using-amazon-bedrock-agentcore-and-amazon-nova-sonic-2-0/
