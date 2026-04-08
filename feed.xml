@@ -1,5 +1,33 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>LLM Vendor Daily Digest</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest</link><description>Bilingual daily digests generated from vendor sources.</description><atom:link href="https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml" rel="self" type="application/rss+xml" /><item><title>Daily Digest / 日报摘要 (2026-04-07)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-07.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-07.md</guid><pubDate>Tue, 07 Apr 2026 04:00:00 +0000</pubDate><description>## English
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>LLM Vendor Daily Digest</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest</link><description>Bilingual daily digests generated from vendor sources.</description><atom:link href="https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml" rel="self" type="application/rss+xml" /><item><title>Daily Digest / 日报摘要 (2026-04-08)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-08.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-08.md</guid><pubDate>Wed, 08 Apr 2026 04:00:00 +0000</pubDate><description># 2026-04-08
+
+## English
+
+### AWS
+*   Learn how to build a natural text-to-SQL solution using Amazon Bedrock that transforms business questions into database queries and returns actionable answers. [Link](https://aws.amazon.com/blogs/machine-learning/text-to-sql-solution-powered-by-amazon-bedrock/)
+*   This post demonstrates how to build an automated podcast generator featuring two AI hosts, highlighting streaming capabilities, stage-aware content filtering, and real-time audio generation. [Link](https://aws.amazon.com/blogs/machine-learning/building-real-time-conversational-podcasts-with-amazon-nova-2-sonic/)
+*   Learn how to use Amazon Bedrock Projects to attribute inference costs to specific workloads and analyze them in AWS Cost Explorer and AWS Data Exports. [Link](https://aws.amazon.com/blogs/machine-learning/manage-ai-costs-with-amazon-bedrock-projects/)
+
+### Hugging Face
+*   Safetensors is joining the PyTorch Foundation. [Link](https://huggingface.co/blog/safetensors-joins-pytorch-foundation)
+*   ALTK‑Evolve introduces on-the-job learning for AI agents. [Link](https://huggingface.co/blog/ibm-research/altk-evolve)
+
+### OpenAI
+*   Discover OpenAI’s Child Safety Blueprint, a roadmap for building AI responsibly with safeguards, age-appropriate design, and collaboration to protect young people online. [Link](https://openai.com/index/introducing-child-safety-blueprint)
+
+## 中文
+
+### AWS
+*   学习如何使用 Amazon Bedrock 构建自然语言转 SQL 解决方案，将业务问题转化为数据库查询并返回可操作的答案。 [链接](https://aws.amazon.com/blogs/machine-learning/text-to-sql-solution-powered-by-amazon-bedrock/)
+*   本文演示了如何构建一个由两名 AI 主持人参与的自动化播客生成器，展示了流式传输能力、阶段感知内容过滤和实时音频生成。 [链接](https://aws.amazon.com/blogs/machine-learning/building-real-time-conversational-podcasts-with-amazon-nova-2-sonic/)
+*   学习如何使用 Amazon Bedrock Projects 将推理成本归因于特定工作负载，并在 AWS Cost Explorer 和 AWS Data Exports 中进行分析。 [链接](https://aws.amazon.com/blogs/machine-learning/manage-ai-costs-with-amazon-bedrock-projects/)
+
+### Hugging Face
+*   Safetensors 正加入 PyTorch 基金会。 [链接](https://huggingface.co/blog/safetensors-joins-pytorch-foundation)
+*   ALTK‑Evolve 为 AI 代理引入了在职学习功能。 [链接](https://huggingface.co/blog/ibm-research/altk-evolve)
+
+### OpenAI
+*   发现 OpenAI 的儿童安全蓝图，这是一份关于负责任地构建 AI 的路线图，包含保障措施、适龄设计和协作机制，以保护并赋能在线的年轻人。 [链接](https://openai.com/index/introducing-child-safety-blueprint)</description></item><item><title>Daily Digest / 日报摘要 (2026-04-07)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-07.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-07.md</guid><pubDate>Tue, 07 Apr 2026 04:00:00 +0000</pubDate><description>## English
 
 ### AWS Machine Learning Blog
 *   Windward enhances alert investigation by combining geospatial intelligence with generative AI, allowing analysts to focus on decision-making. [Link](https://aws.amazon.com/blogs/machine-learning/from-isolated-alerts-to-contextual-intelligence-agentic-maritime-anomaly-analysis-with-generative-ai/)
@@ -1068,4 +1096,4 @@ Together AI 博客宣布 Rime Arcana V3 Turbo 和 Rime Arcana V3 模型现已上
 
 ### Together AI Blog
 - [Together Evaluations now supports comparing top commercial APIs vs. open source models](https://www.together.ai/blog/together-evaluations-v2) (2026-02-02 00:00) - Together Evaluations now supports OpenAI, Anthropic, and Google models for cross-provider benchmarking. Compare open-source, fine-tuned, and proprietary models side-by-side to make data-driven decisions on quality, cost, and performance—...
-- [Fine-tuning open LLM judges to outperform GPT-5.2](https://www.together.ai/blog/fine-tuning-open-llm-judges-to-outperform-gpt-5-2) (2026-02-02 00:00) - Fine-tuned open-source LLM judges can outperform GPT-5.2 at evaluating model outputs. Using Direct Preference Optimization on just 5,400 preference pairs, we trained GPT-OSS 120B to beat GPT-5.2 on human preference alignment—at 15x lower...</description></item><item><title>Daily Digest / 日报摘要 (2026-02-01)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-02-01.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-02-01.md</guid><pubDate>Sun, 01 Feb 2026 04:00:00 +0000</pubDate><description>No items found for this date. / 当日未找到相关条目。</description></item></channel></rss>
+- [Fine-tuning open LLM judges to outperform GPT-5.2](https://www.together.ai/blog/fine-tuning-open-llm-judges-to-outperform-gpt-5-2) (2026-02-02 00:00) - Fine-tuned open-source LLM judges can outperform GPT-5.2 at evaluating model outputs. Using Direct Preference Optimization on just 5,400 preference pairs, we trained GPT-OSS 120B to beat GPT-5.2 on human preference alignment—at 15x lower...</description></item></channel></rss>
