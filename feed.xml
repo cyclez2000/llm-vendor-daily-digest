@@ -1,5 +1,47 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>LLM Vendor Daily Digest</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest</link><description>Bilingual daily digests generated from vendor sources.</description><atom:link href="https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml" rel="self" type="application/rss+xml" /><item><title>Daily Digest / 日报摘要 (2026-04-08)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-08.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-08.md</guid><pubDate>Wed, 08 Apr 2026 04:00:00 +0000</pubDate><description># 2026-04-08
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>LLM Vendor Daily Digest</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest</link><description>Bilingual daily digests generated from vendor sources.</description><atom:link href="https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml" rel="self" type="application/rss+xml" /><item><title>Daily Digest / 日报摘要 (2026-04-09)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-09.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-09.md</guid><pubDate>Thu, 09 Apr 2026 04:00:00 +0000</pubDate><description>## English
+
+### AWS
+*   Explore where reinforcement fine-tuning (RFT) is most effective using the GSM8K dataset, and learn best practices for dataset preparation, reward function design, and hyperparameter tuning on Amazon Bedrock. [Link](https://aws.amazon.com/blogs/machine-learning/reinforcement-fine-tuning-on-amazon-bedrock-best-practices/)
+*   Learn how to implement Amazon Nova Multimodal Embeddings to build a production-ready audio search system, including understanding audio embeddings and indexing/querying audio libraries. [Link](https://aws.amazon.com/blogs/machine-learning/building-intelligent-audio-search-with-amazon-nova-embeddings-a-deep-dive-into-semantic-audio-understanding/)
+*   Discover four practical approaches to implementing human-in-the-loop (HITL) constructs for AI agents in healthcare and life sciences to ensure compliance with sensitive data regulations. [Link](https://aws.amazon.com/blogs/machine-learning/human-in-the-loop-constructs-for-agentic-workflows-in-healthcare-and-life-sciences/)
+*   Walk through a complete implementation of fine-tuning Amazon Nova models on Amazon Bedrock using an intent classifier example to improve domain-specific task performance. [Link](https://aws.amazon.com/blogs/machine-learning/customize-amazon-nova-models-with-amazon-bedrock-fine-tuning/)
+*   Learn how to build stateful MCP servers that request user input dynamically and stream progress updates for long-running tasks using Amazon Bedrock AgentCore Runtime. [Link](https://aws.amazon.com/blogs/machine-learning/introducing-stateful-mcp-client-capabilities-on-amazon-bedrock-agentcore-runtime/)
+
+### Baidu
+*   Baidu&amp;#x27;s enterprise-grade PP-OCRv5 API service is now open for public testing, offering up to 2,000 free test resources. [Link](https://ai.baidu.com/support/news?action=detail&amp;amp;id=3266)
+
+### Hugging Face
+*   Explore the capabilities of Sentence Transformers for multimodal embeddings and reranking models to enhance search and retrieval systems. [Link](https://huggingface.co/blog/multimodal-sentence-transformers)
+
+### Microsoft
+*   Read how LTM&amp;#x27;s Rajesh Kumar integrates Microsoft 365 Copilot into his workflow to enhance collaboration and productivity. [Link](https://news.microsoft.com/source/asia/features/from-prompts-to-partnership-how-ltms-rajesh-kumar-collaborates-with-microsoft-365-copilot/)
+
+### OpenAI
+*   Check the official terms and conditions for the OpenAI Full Fan Mode Contest, including eligibility, entry steps, and prize details for IPL match tickets. [Link](https://openai.com/index/full-fan-mode-contest-terms-conditions/)
+
+***
+
+## 中文
+
+### AWS
+*   探索强化微调（RFT）在GSM8K数据集上的最佳应用场景，并学习在Amazon Bedrock上进行数据集准备、奖励函数设计和超参数调优的最佳实践。 [链接](https://aws.amazon.com/blogs/machine-learning/reinforcement-fine-tuning-on-amazon-bedrock-best-practices/)
+*   学习如何实现Amazon Nova多模态嵌入以构建生产就绪的音频搜索系统，包括理解音频嵌入以及索引/查询音频库。 [链接](https://aws.amazon.com/blogs/machine-learning/building-intelligent-audio-search-with-amazon-nova-embeddings-a-deep-dive-into-semantic-audio-understanding/)
+*   发现四种在医疗和生命科学领域为AI代理实施人机交互（HITL）结构以符合敏感数据法规的实际方法。 [链接](https://aws.amazon.com/blogs/machine-learning/human-in-the-loop-constructs-for-agentic-workflows-in-healthcare-and-life-sciences/)
+*   通过意图分类器示例，逐步完成在Amazon Bedrock上微调Amazon Nova模型的完整实现，以提高特定领域任务的性能。 [链接](https://aws.amazon.com/blogs/machine-learning/customize-amazon-nova-models-with-amazon-bedrock-fine-tuning/)
+*   学习如何使用Amazon Bedrock AgentCore Runtime构建有状态MCP服务器，以动态请求用户输入并为长时间运行的任务流式传输进度更新。 [链接](https://aws.amazon.com/blogs/machine-learning/introducing-stateful-mcp-client-capabilities-on-amazon-bedrock-agentcore-runtime/)
+
+### 百度
+*   百度的企业级PP-OCRv5 API服务现已开放公测，提供最高2000次免费测试资源。 [链接](https://ai.baidu.com/support/news?action=detail&amp;amp;id=3266)
+
+### Hugging Face
+*   探索Sentence Transformers在多模态嵌入和重排序模型中的能力，以增强搜索和检索系统。 [链接](https://huggingface.co/blog/multimodal-sentence-transformers)
+
+### Microsoft
+*   阅读LTM的Rajesh Kumar如何将Microsoft 365 Copilot集成到工作流程中，以增强协作和生产力。 [链接](https://news.microsoft.com/source/asia/features/from-prompts-to-partnership-how-ltms-rajesh-kumar-collaborates-with-microsoft-365-copilot/)
+
+### OpenAI
+*   查看OpenAI Full Fan Mode竞赛的官方条款和条件，包括IPL比赛门票的资格、参赛步骤和奖品详情。 [链接](https://openai.com/index/full-fan-mode-contest-terms-conditions/)</description></item><item><title>Daily Digest / 日报摘要 (2026-04-08)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-08.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-08.md</guid><pubDate>Wed, 08 Apr 2026 04:00:00 +0000</pubDate><description># 2026-04-08
 
 ## English
 
@@ -1060,40 +1102,4 @@ Together AI 博客宣布 Rime Arcana V3 Turbo 和 Rime Arcana V3 模型现已上
 *   OpenAI 阐述了 Sora feed 的理念，旨在通过个性化推荐、家长控制和严格护栏来激发创造力并确保体验安全。 [https://openai.com/index/sora-feed-philosophy](https://openai.com/index/sora-feed-philosophy)
 
 ### Together AI
-*   Together AI 招聘 Alon Gavrielov 担任基础设施战略副总裁，以深化其构建可靠、高效 AI 基础设施的承诺。 [https://www.together.ai/blog/alon-gavrielov-as-vp-of-infrastructure-strategy](https://www.together.ai/blog/alon-gavrielov-as-vp-of-infrastructure-strategy)</description></item><item><title>Daily Digest / 日报摘要 (2026-02-02)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-02-02.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-02-02.md</guid><pubDate>Mon, 02 Feb 2026 04:00:00 +0000</pubDate><description>## English
-### Anthropic (Newsroom)
-- [Anthropic partners with Allen Institute and Howard Hughes Medical Institute to accelerate scientific discovery](https://www.anthropic.com/news/anthropic-partners-with-allen-institute-and-howard-hughes-medical-institute) (2026-02-02 00:00)
-
-### Google AI Blog
-- [Advancing AI benchmarking with Game Arena](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/kaggle-game-arena-updates/) (2026-02-02 17:00) - An illustration of a King and Ace playing card, a wolf&amp;#x27;s head, two chess pieces, a poker chip, and other abstract shapes on a white background.1
-- [How we’re helping preserve the genetic information of endangered species with AI](https://blog.google/innovation-and-ai/technology/ai/ai-to-preserve-endangered-species/) (2026-02-02 18:00) - A four-part vertical collage showing a cotton-top tamarin, an ibex, a golden lion tamarin, and a penguin.
-
-### MiniMax (News)
-- [MiniMax Agent “卧底” Moltbook，聊天记录曝光](https://www.minimaxi.com/news/minimax-agent-卧底-moltbook聊天记录曝光) (2026-02-02 16:00)
-
-### OpenAI
-- [Introducing the Codex app](https://openai.com/index/introducing-the-codex-app) (2026-02-02 00:00) - Introducing the Codex app for macOS—a command center for AI coding and software development with multiple agents, parallel workflows, and long-running tasks.
-- [Snowflake and OpenAI partner to bring frontier intelligence to enterprise data](https://openai.com/index/snowflake-partnership) (2026-02-02 06:00) - OpenAI and Snowflake partner in a $200M agreement to bring frontier intelligence into enterprise data, enabling AI agents and insights directly in Snowflake.
-
-### Together AI Blog
-- [Together Evaluations now supports comparing top commercial APIs vs. open source models](https://www.together.ai/blog/together-evaluations-v2) (2026-02-02 00:00) - Together Evaluations now supports OpenAI, Anthropic, and Google models for cross-provider benchmarking. Compare open-source, fine-tuned, and proprietary models side-by-side to make data-driven decisions on quality, cost, and performance—...
-- [Fine-tuning open LLM judges to outperform GPT-5.2](https://www.together.ai/blog/fine-tuning-open-llm-judges-to-outperform-gpt-5-2) (2026-02-02 00:00) - Fine-tuned open-source LLM judges can outperform GPT-5.2 at evaluating model outputs. Using Direct Preference Optimization on just 5,400 preference pairs, we trained GPT-OSS 120B to beat GPT-5.2 on human preference alignment—at 15x lower...
-
-## 中文
-### Anthropic (Newsroom)
-- [Anthropic partners with Allen Institute and Howard Hughes Medical Institute to accelerate scientific discovery](https://www.anthropic.com/news/anthropic-partners-with-allen-institute-and-howard-hughes-medical-institute) (2026-02-02 00:00)
-
-### Google AI Blog
-- [Advancing AI benchmarking with Game Arena](https://blog.google/innovation-and-ai/models-and-research/google-deepmind/kaggle-game-arena-updates/) (2026-02-02 17:00) - An illustration of a King and Ace playing card, a wolf&amp;#x27;s head, two chess pieces, a poker chip, and other abstract shapes on a white background.1
-- [How we’re helping preserve the genetic information of endangered species with AI](https://blog.google/innovation-and-ai/technology/ai/ai-to-preserve-endangered-species/) (2026-02-02 18:00) - A four-part vertical collage showing a cotton-top tamarin, an ibex, a golden lion tamarin, and a penguin.
-
-### MiniMax (News)
-- [MiniMax Agent “卧底” Moltbook，聊天记录曝光](https://www.minimaxi.com/news/minimax-agent-卧底-moltbook聊天记录曝光) (2026-02-02 16:00)
-
-### OpenAI
-- [Introducing the Codex app](https://openai.com/index/introducing-the-codex-app) (2026-02-02 00:00) - Introducing the Codex app for macOS—a command center for AI coding and software development with multiple agents, parallel workflows, and long-running tasks.
-- [Snowflake and OpenAI partner to bring frontier intelligence to enterprise data](https://openai.com/index/snowflake-partnership) (2026-02-02 06:00) - OpenAI and Snowflake partner in a $200M agreement to bring frontier intelligence into enterprise data, enabling AI agents and insights directly in Snowflake.
-
-### Together AI Blog
-- [Together Evaluations now supports comparing top commercial APIs vs. open source models](https://www.together.ai/blog/together-evaluations-v2) (2026-02-02 00:00) - Together Evaluations now supports OpenAI, Anthropic, and Google models for cross-provider benchmarking. Compare open-source, fine-tuned, and proprietary models side-by-side to make data-driven decisions on quality, cost, and performance—...
-- [Fine-tuning open LLM judges to outperform GPT-5.2](https://www.together.ai/blog/fine-tuning-open-llm-judges-to-outperform-gpt-5-2) (2026-02-02 00:00) - Fine-tuned open-source LLM judges can outperform GPT-5.2 at evaluating model outputs. Using Direct Preference Optimization on just 5,400 preference pairs, we trained GPT-OSS 120B to beat GPT-5.2 on human preference alignment—at 15x lower...</description></item></channel></rss>
+*   Together AI 招聘 Alon Gavrielov 担任基础设施战略副总裁，以深化其构建可靠、高效 AI 基础设施的承诺。 [https://www.together.ai/blog/alon-gavrielov-as-vp-of-infrastructure-strategy](https://www.together.ai/blog/alon-gavrielov-as-vp-of-infrastructure-strategy)</description></item></channel></rss>
