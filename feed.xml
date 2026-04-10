@@ -1,5 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>LLM Vendor Daily Digest</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest</link><description>Bilingual daily digests generated from vendor sources.</description><atom:link href="https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml" rel="self" type="application/rss+xml" /><item><title>Daily Digest / 日报摘要 (2026-04-09)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-09.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-09.md</guid><pubDate>Thu, 09 Apr 2026 04:00:00 +0000</pubDate><description>## English
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>LLM Vendor Daily Digest</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest</link><description>Bilingual daily digests generated from vendor sources.</description><atom:link href="https://raw.githubusercontent.com/cyclez2000/llm-vendor-daily-digest/master/feed.xml" rel="self" type="application/rss+xml" /><item><title>Daily Digest / 日报摘要 (2026-04-10)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-10.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-10.md</guid><pubDate>Fri, 10 Apr 2026 04:00:00 +0000</pubDate><description>## English
+
+### AWS Machine Learning Blog
+*   This post guides you through embedding a live AI browser agent in your React app using Amazon Bedrock AgentCore, covering session generation, rendering, and agent wiring to create a working sample application. [Link](https://aws.amazon.com/blogs/machine-learning/embed-a-live-ai-browser-agent-in-your-react-app-with-amazon-bedrock-agentcore/)
+*   AWS announces AWS Agent Registry (preview) in AgentCore, a centralized platform to discover, share, and reuse AI agents, tools, and skills across your enterprise. [Link](https://aws.amazon.com/blogs/machine-learning/the-future-of-managing-agents-at-scale-aws-agent-registry-now-in-preview/)
+*   This post explains how to manage Foundation Model transitions in Amazon Bedrock to ensure operational continuity, covering lifecycle states and practical strategies for migrating applications to newer models. [Link](https://aws.amazon.com/blogs/machine-learning/understanding-amazon-bedrock-model-lifecycle/)
+
+## 中文
+
+### AWS Machine Learning Blog
+*   本文指导您如何使用 Amazon Bedrock AgentCore 在 React 应用中嵌入实时 AI 浏览器代理，涵盖会话生成、渲染和代理连接，以创建一个可运行的示例应用程序。 [链接](https://aws.amazon.com/blogs/machine-learning/embed-a-live-ai-browser-agent-in-your-react-app-with-amazon-bedrock-agentcore/)
+*   AWS 在 AgentCore 中宣布推出 AWS Agent Registry（预览版），这是一个集中式平台，用于在企业范围内发现、共享和重用 AI 代理、工具和技能。 [链接](https://aws.amazon.com/blogs/machine-learning/the-future-of-managing-agents-at-scale-aws-agent-registry-now-in-preview/)
+*   本文解释了如何在 Amazon Bedrock 中管理基础模型转换以确保应用运行连续性，涵盖生命周期状态以及将应用程序迁移到新模型的实际策略。 [链接](https://aws.amazon.com/blogs/machine-learning/understanding-amazon-bedrock-model-lifecycle/)</description></item><item><title>Daily Digest / 日报摘要 (2026-04-09)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-09.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-04-09.md</guid><pubDate>Thu, 09 Apr 2026 04:00:00 +0000</pubDate><description>## English
 
 ### AWS
 *   Explore where reinforcement fine-tuning (RFT) is most effective using the GSM8K dataset, and learn best practices for dataset preparation, reward function design, and hyperparameter tuning on Amazon Bedrock. [Link](https://aws.amazon.com/blogs/machine-learning/reinforcement-fine-tuning-on-amazon-bedrock-best-practices/)
@@ -1070,36 +1082,4 @@ OpenAI 详细介绍了 VfL Wolfsburg 如何将 ChatGPT 集成到整个俱乐部�
 OpenAI 解释了如何构建 Codex App Server，这是一个用于流式传输进度、工具使用和审批的双向 JSON-RPC API。[链接](https://openai.com/index/unlocking-the-codex-harness)
 
 ### Together AI Blog
-Together AI 博客宣布 Rime Arcana V3 Turbo 和 Rime Arcana V3 模型现已上线。[链接](https://www.together.ai/blog/rime-arcana-v3-turbo-and-rime-arcana-v3-now-available-on-together-ai)</description></item><item><title>Daily Digest / 日报摘要 (2026-02-03)</title><link>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-02-03.md</link><guid>https://github.com/cyclez2000/llm-vendor-daily-digest/blob/master/data/daily/2026-02-03.md</guid><pubDate>Tue, 03 Feb 2026 04:00:00 +0000</pubDate><description>## English
-
-### Anthropic
-*   Anthropic announces that Apple’s Xcode now supports the Claude Agent SDK, enabling developers to integrate Claude directly into iOS development. [https://www.anthropic.com/news/apple-xcode-claude-agent-sdk](https://www.anthropic.com/news/apple-xcode-claude-agent-sdk)
-
-### Hugging Face
-*   Hugging Face details training design lessons for text-to-image models based on ablation studies. [https://huggingface.co/blog/Photoroom/prx-part2](https://huggingface.co/blog/Photoroom/prx-part2)
-*   Hugging Face explores the future of the global open-source AI ecosystem following the DeepSeek moment. [https://huggingface.co/blog/huggingface/one-year-since-the-deepseek-moment-blog-3](https://huggingface.co/blog/huggingface/one-year-since-the-deepseek-moment-blog-3)
-*   Hugging Face introduces H Company&amp;#x27;s new Holo2 model, which leads in UI localization capabilities. [https://huggingface.co/blog/Hcompany/introducing-holo2-235b-a22b](https://huggingface.co/blog/Hcompany/introducing-holo2-235b-a22b)
-
-### OpenAI
-*   OpenAI outlines the philosophy behind the Sora feed, designed to spark creativity and ensure safety through personalized recommendations and guardrails. [https://openai.com/index/sora-feed-philosophy](https://openai.com/index/sora-feed-philosophy)
-
-### Together AI
-*   Together AI appoints Alon Gavrielov as VP of Infrastructure Strategy to strengthen its commitment to building reliable and scalable AI infrastructure. [https://www.together.ai/blog/alon-gavrielov-as-vp-of-infrastructure-strategy](https://www.together.ai/blog/alon-gavrielov-as-vp-of-infrastructure-strategy)
-
-***
-
-## 中文
-
-### Anthropic
-*   Anthropic 宣布 Apple 的 Xcode 现已支持 Claude Agent SDK，允许开发者直接在 iOS 开发中集成 Claude。 [https://www.anthropic.com/news/apple-xcode-claude-agent-sdk](https://www.anthropic.com/news/apple-xcode-claude-agent-sdk)
-
-### Hugging Face
-*   Hugging Face 分享了基于消融研究的文本到图像模型训练设计经验。 [https://huggingface.co/blog/Photoroom/prx-part2](https://huggingface.co/blog/Photoroom/prx-part2)
-*   Hugging Face 探讨了 DeepSeek 时刻之后全球开源 AI 生态系统的未来。 [https://huggingface.co/blog/huggingface/one-year-since-the-deepseek-moment-blog-3](https://huggingface.co/blog/huggingface/one-year-since-the-deepseek-moment-blog-3)
-*   Hugging Face 介绍了 H Company 的新 Holo2 模型，该模型在 UI 本地化方面表现领先。 [https://huggingface.co/blog/Hcompany/introducing-holo2-235b-a22b](https://huggingface.co/blog/Hcompany/introducing-holo2-235b-a22b)
-
-### OpenAI
-*   OpenAI 阐述了 Sora feed 的理念，旨在通过个性化推荐、家长控制和严格护栏来激发创造力并确保体验安全。 [https://openai.com/index/sora-feed-philosophy](https://openai.com/index/sora-feed-philosophy)
-
-### Together AI
-*   Together AI 招聘 Alon Gavrielov 担任基础设施战略副总裁，以深化其构建可靠、高效 AI 基础设施的承诺。 [https://www.together.ai/blog/alon-gavrielov-as-vp-of-infrastructure-strategy](https://www.together.ai/blog/alon-gavrielov-as-vp-of-infrastructure-strategy)</description></item></channel></rss>
+Together AI 博客宣布 Rime Arcana V3 Turbo 和 Rime Arcana V3 模型现已上线。[链接](https://www.together.ai/blog/rime-arcana-v3-turbo-and-rime-arcana-v3-now-available-on-together-ai)</description></item></channel></rss>
